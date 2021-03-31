@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="tipcalc.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <div class="child-container">
+            <h1 class="main-header">Tip Calculator</h1>
+                <div class="div1">
+                    <h3 class="sub-header">Bill Amount</h3>
+                    <span>$
+                        <input class="billClass" type="text" placeholder="ie. 30.00">
+                    </span>
+                </div class="div1">
+            
+                <div class="div2">
+                    <h3 class='sub-header'>Tip Percentage</h3>
+                    <span>%
+                        <input class="tipClass" type="text" placeholder="ie. 15">
+                    </span>
+                </div>
+    
+                <div class="div3">
+                    <button onclick="calculateTip()" class="button" type="button">Calculate Total</button>
+                </div>
+    
+                <div class="div4">
+                    <h3 class='sub-header'>Total Amount</h3>
+                            <p class="totalAmount">$0.00</p>  
+                </div>
+        </div>
+    </div>
+    <footer>Created by Randy Chong</footer>
+</body>
+<script>
+    function calculateTip (){
+        let billAmount = document.querySelector(".billClass").value
+        let tipPercentage = document.querySelector(".tipClass").value
+        let total = document.querySelector(".totalAmount")
+        
+        billAmount = Number(billAmount)
+        tipPercentage = Number(tipPercentage) / 100
+        tipAmount = billAmount * tipPercentage
+
+        function addAmount(){
+            finalAmount = billAmount + tipAmount
+            total.innerHTML = finalAmount
+            finalAmount = "$" + finalAmount
+        }
+        addAmount()
+    }
+</script>
+</html>

@@ -38,6 +38,8 @@
 }
 
 .button {
+  display: flex;
+  margin: auto;
   margin-top: 1.5rem;
   border-radius: 5rem;
   outline: none;
@@ -62,9 +64,6 @@
 
 body {
   font-family: "Nunito", sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 .totalAmount {

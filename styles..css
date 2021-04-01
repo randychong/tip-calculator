@@ -76,3 +76,9 @@ body {
 footer {
   text-align: right;
 }
+
+.tip-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
